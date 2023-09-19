@@ -5,30 +5,137 @@
 //! Good practice all around! 
 
 
-const myWeapons = 
-  ["Low Damage Swords"                                                                    //*<---Start of Weapons
-  ["Samurai Sword", "Broad Sword", "Kitchen Knife"]
-  ["Sword of Everlight", "Sword of Embracing Darkness", "Sword of Quickness", "Sword of Time", "Sword of the Bastard King"]
-], 
-  ["Low Damage Fist Weapons" //! Here Too!                                               //*<---Start of new New Weapon Type   <--ocd its red
-  ["Gauntlet of Reckoning", "Brass Knuckles of the Boar", "Shimmering Brass Knuckles"]
-],["Ranged Bows"                                                                         //*<---Start of new New Weapon Type
-  ["Deadly Crossbow of the Demon", "Longbow of Silence", "Shortbow of Quickfire", "Crossbow of the Divine"]
-], [ "Mid-Grade Swords"                                                                  //*<---Start of new New Weapon Type
-  ["Sword of Everlight", "Sword of Embracing Darkness", "Sword of Quickness", "Sword of Time", "Sword of the Bastard King"]
+
+const meleeZombies = {
+  missingLimbZombies: ["Headless Zombie", "Missing Right Arm Zombie", "Missing Left Arm Zombie", "Missing Right Leg Zombie", "Missing Left Leg Zombie", "Missing Both Legs and Arms Zombie"], 
+  ailmentZombies: ["Venomous Zombie", "Diseased Zombie", "Cursed Zombie"],
+  zombieAnimals: ["Rabid Dog", "Rabid Cat", "Rabid Zoo Lion", "Rabid Zoo Monkey"],
+}
+
+meleeZombies.missingLimbZombies[0];
+
+
+
+
+
+const myWeapons = [
+  lowDamageSwords = ["Samurai Sword", "Broad Sword", "Kitchen Knife", "Short Sword"],
+  lowDamageFistWeapons = ["Copper Brass Knuckles", "Bronze Brass Knuckles", "Brass Knuckles of the Boar", "Shimmering Brass Knuckles"],
+  rangedBows = ["Deadly Crossbow of the Demon", "Longbow of Silence", "Shortbow of Quickfire", "Crossbow of the Divine"],
+  midGradeSwords = ["Sword of Everlight", "Sword of Embracing Darkness", "Sword of Quickness", "Sword of Time", "Sword of the Bastard King"],
+]
+
+function nondestructivelyUpdateObject(obj, key, value) {
+  const newMissingLimbZombies = { ...meleeZombies.missingLimbZombies };
+
+}
+const newMissingLimbZombies = nondestructivelyUpdateObject(
+  meleeZombies, 'missingLimbZombies', ["new zombietype1", "new zombietype2", "new zombietype3", "new zombietype4", "new zombietype5", "new zombietype6"]
+);
+
+  newMissingLimbZombies[6] = ;
+}
+
+// function nondestructivelyUpdateObject(obj, key, value) {
+//   // Create a copy of the original list you want to update
+//   const newList = [...obj[key]];
+
+//   // Add the new values to the copied list
+//   newList.push(...value);
+
+//   // Create a new object with the updated list and return it
+//   return { ...obj, [key]: newList };
+// }
+
+// const updatedMeleeZombies = nondestructivelyUpdateObject(
+//   meleeZombies, // Your original container
+//   'missingLimbZombies', // The label for the part you want to update
+//   [
+//     "new zombietype1",
+//     "new zombietype2",
+//     "new zombietype3",
+//     "new zombietype4",
+//     "new zombietype5",
+//     "new zombietype6",
+//   ] // The new zombie types you want to add
+// );
+
+
+
+
+const myWeapons = [
+  ["Low Damage Swords", //*<---Start of Weapons
+    ["Samurai Sword", "Broad Sword", "Kitchen Knife"],
+    ["Sword of Everlight", "Sword of Embracing Darkness", "Sword of Quickness", "Sword of Time", "Sword of the Bastard King"]
+  ],
+  ["Low Damage Fist Weapons", //! Here Too! //*<---Start of new New Weapon Type   <--ocd its red
+    ["Gauntlet of Reckoning", "Brass Knuckles of the Boar", "Shimmering Brass Knuckles"]
+  ],
+  ["Ranged Bows", //*<---Start of new New Weapon Type
+    ["Deadly Crossbow of the Demon", "Longbow of Silence", "Shortbow of Quickfire", "Crossbow of the Divine"]
+  ],
+  ["Mid-Grade Swords", //*<---Start of new New Weapon Type
+    ["Sword of Everlight", "Sword of Embracing Darkness", "Sword of Quickness", "Sword of Time", "Sword of the Bastard King"]
+  ]
 ];
 
 myWeapons[0];
 
-const meleeZombies = 
-  ["Ailment Zombies"                                                                     //*<---Start of new New Zombie Type
-  ["Venomous Zombie", "Diseased Zombie", "Cursed Zombie"]]
-  ["Zombie Animals", //! Maybe we can look at this error and get more in depth, I got a error code of Array Element Destructuring pattern expected. (Google) said that I have an extra bracket somewhere. Corrected! maybe input from Matteo?
-  ["Rabid Dog", "Rabid Cat", "Rabid Zoo Lion", "Rabid Zoo Monkey"]],
-  ["Missing Limb Zombies"                                                                //*<---Start of new New Zombie Type
-  ["Headless Zombie", "Missing Right Arm Zombie", "Missing Left Arm Zombie", "Missing Right Leg Zombie", "Missing Left Leg Zombie", "Missing Both Legs and Arms Zombie"]]
 
-["Zombies with Weapons"]                                                                 //*<---Start of new New Zombie Type
+
+
+const barbWeaponType = 
+[ "Great Axes", "Great Sword", "Great Mace", "One-Handed Swords", "One-Handed Axes", "One-Handed Maces"]
+
+
+
+const myClasses = [
+{
+  name: "Throktar",
+  class: "Barbarian",
+  weaponType: barbWeaponType,
+  race: "Half-Elf", 
+}, 
+{ name: "Trixie",
+  class: "Thief",
+  weaponType: [], //* Need to create a function / array for her weapon type 
+  race: "Human" 
+}
+];
+
+
+console.log(myClasses);
+
+
+
+
+
+
+const lowDmgSwords = 
+["Samurai Sword", "BroadSword", "Kitchen Knife", "Short Sword"]
+
+const lowDmgFistWeapons = 
+["Copper Brass Knuckles", "Bronze Brass Knuckles", ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Below I would like to generate a random number range for these (Probably limit Missing Limb Zombies from level 1-3, then Zombie Animals 3 - 7, then Ailment Zombies 7 - 10, eventually creating another tier of zombie that is more difficult)
@@ -120,3 +227,15 @@ function battle(playerWeapon) {
 // I would like to create a website to incorporate images to this, as well as a random (Dice maybe?) to randomize the odds against each enemy. 
 
 //I would like 
+
+
+const myArray = ["Kris", "tofer"];
+
+myArray[0] + myArray[1];
+
+
+// console.log(myArray); // "Twinkle"
+
+
+
+const crappyArray = [ "Kris", "tofer", "Twinkle", "Twinkle", "Little", "Star" ];
